@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/install
+
+Name: ur5_platform_manipulation
+Description: Description of ur5_platform_manipulation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

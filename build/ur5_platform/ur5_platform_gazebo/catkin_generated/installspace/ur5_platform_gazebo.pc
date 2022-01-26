@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/install
+
+Name: ur5_platform_gazebo
+Description: Description of ur5_platform_gazebo
+Version: 1.2.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

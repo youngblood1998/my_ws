@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/devel_isolated/ur_driver
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.2.5
+Cflags: -I/home/jay/my_ws/devel_isolated/ur_driver/include
+Libs: -L${prefix}/lib 
+Requires: dynamic_reconfigure

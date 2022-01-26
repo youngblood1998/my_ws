@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/install
+
+Name: ur5_ikfast_manipulator_plugin
+Description: Description of ur5_ikfast_manipulator_plugin
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core pluginlib roscpp tf_conversions

@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/devel_isolated/robotiq_85_driver
+
+Name: robotiq_85_driver
+Description: Description of robotiq_85_driver
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

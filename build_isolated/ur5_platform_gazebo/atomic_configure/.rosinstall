@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jay/my_ws/devel_isolated/ur5_platform_gazebo/setup.sh

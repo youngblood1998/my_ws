@@ -1,0 +1,4 @@
+抓取位姿估计
+rosrun ur5_platform_manipulation ur5_grasp_posture_estimation.py
+自适应抓取力调节
+rosrun ur5_platform_manipulation ur5_grasp_force_adjustment.py

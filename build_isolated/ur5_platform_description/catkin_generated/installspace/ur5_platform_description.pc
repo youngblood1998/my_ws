@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/install_isolated
+
+Name: ur5_platform_description
+Description: Description of ur5_platform_description
+Version: 1.2.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

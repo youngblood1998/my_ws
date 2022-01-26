@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jay/my_ws/devel_isolated/robotiq_85_driver/setup.sh

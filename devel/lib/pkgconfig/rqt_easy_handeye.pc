@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/devel
+
+Name: rqt_easy_handeye
+Description: Description of rqt_easy_handeye
+Version: 0.4.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

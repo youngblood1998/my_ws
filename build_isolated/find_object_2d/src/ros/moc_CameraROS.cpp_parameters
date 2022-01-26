@@ -1,0 +1,12 @@
+-I/home/jay/my_ws/devel_isolated/find_object_2d/include
+-DPROJECT_PREFIX="find_object"
+-DPROJECT_VERSION="0.6.3"
+-DPROJECT_NAME="find_object_2d"
+-DOPENCV_DEV
+-DQT_NO_KEYWORDS
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="find_object_2d"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/jay/my_ws/build_isolated/find_object_2d/src/ros/moc_CameraROS.cpp
+/home/jay/my_ws/src/find_object_2d/src/ros/CameraROS.h

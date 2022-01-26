@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/install_isolated
+
+Name: robotiq_85_driver
+Description: Description of robotiq_85_driver
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

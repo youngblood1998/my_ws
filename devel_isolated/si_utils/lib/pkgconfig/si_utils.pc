@@ -1,0 +1,8 @@
+prefix=/home/jay/my_ws/devel_isolated/si_utils
+
+Name: si_utils
+Description: Description of si_utils
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
