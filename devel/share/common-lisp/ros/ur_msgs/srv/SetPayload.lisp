@@ -11,12 +11,7 @@
     :reader payload
     :initarg :payload
     :type cl:float
-    :initform 0.0)
-   (center_of_gravity
-    :reader center_of_gravity
-    :initarg :center_of_gravity
-    :type geometry_msgs-msg:Vector3
-    :initform (cl:make-instance 'geometry_msgs-msg:Vector3)))
+    :initform 0.0))
 )
 
 (cl:defclass SetPayload-request (<SetPayload-request>)
@@ -31,11 +26,6 @@
 (cl:defmethod payload-val ((m <SetPayload-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ur_msgs-srv:payload-val is deprecated.  Use ur_msgs-srv:payload instead.")
   (payload m))
-
-(cl:ensure-generic-function 'center_of_gravity-val :lambda-list '(m))
-(cl:defmethod center_of_gravity-val ((m <SetPayload-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ur_msgs-srv:center_of_gravity-val is deprecated.  Use ur_msgs-srv:center_of_gravity instead.")
-  (center_of_gravity m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <SetPayload-request>) ostream)
   "Serializes a message object of type '<SetPayload-request>"
   (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'payload))))
@@ -43,7 +33,6 @@
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
-  (roslisp-msg-protocol:serialize (cl:slot-value msg 'center_of_gravity) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <SetPayload-request>) istream)
   "Deserializes a message object of type '<SetPayload-request>"
@@ -53,7 +42,6 @@
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
     (cl:setf (cl:slot-value msg 'payload) (roslisp-utils:decode-single-float-bits bits)))
-  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'center_of_gravity) istream)
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<SetPayload-request>)))
@@ -64,26 +52,24 @@
   "ur_msgs/SetPayloadRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<SetPayload-request>)))
   "Returns md5sum for a message object of type '<SetPayload-request>"
-  "98b2f6ade618936d2c8998562272cbf5")
+  "7f12eb632882cb73e5721178d0073e39")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'SetPayload-request)))
   "Returns md5sum for a message object of type 'SetPayload-request"
-  "98b2f6ade618936d2c8998562272cbf5")
+  "7f12eb632882cb73e5721178d0073e39")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetPayload-request>)))
   "Returns full string definition for message of type '<SetPayload-request>"
-  (cl:format cl:nil "float32 payload~%geometry_msgs/Vector3 center_of_gravity~%~%================================================================================~%MSG: geometry_msgs/Vector3~%# This represents a vector in free space. ~%# It is only meant to represent a direction. Therefore, it does not~%# make sense to apply a translation to it (e.g., when applying a ~%# generic rigid transformation to a Vector3, tf2 will only apply the~%# rotation). If you want your data to be translatable too, use the~%# geometry_msgs/Point message instead.~%~%float64 x~%float64 y~%float64 z~%~%"))
+  (cl:format cl:nil "float32 payload~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetPayload-request)))
   "Returns full string definition for message of type 'SetPayload-request"
-  (cl:format cl:nil "float32 payload~%geometry_msgs/Vector3 center_of_gravity~%~%================================================================================~%MSG: geometry_msgs/Vector3~%# This represents a vector in free space. ~%# It is only meant to represent a direction. Therefore, it does not~%# make sense to apply a translation to it (e.g., when applying a ~%# generic rigid transformation to a Vector3, tf2 will only apply the~%# rotation). If you want your data to be translatable too, use the~%# geometry_msgs/Point message instead.~%~%float64 x~%float64 y~%float64 z~%~%"))
+  (cl:format cl:nil "float32 payload~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetPayload-request>))
   (cl:+ 0
      4
-     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'center_of_gravity))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <SetPayload-request>))
   "Converts a ROS message object to a list"
   (cl:list 'SetPayload-request
     (cl:cons ':payload (payload msg))
-    (cl:cons ':center_of_gravity (center_of_gravity msg))
 ))
 ;//! \htmlinclude SetPayload-response.msg.html
 
@@ -124,10 +110,10 @@
   "ur_msgs/SetPayloadResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<SetPayload-response>)))
   "Returns md5sum for a message object of type '<SetPayload-response>"
-  "98b2f6ade618936d2c8998562272cbf5")
+  "7f12eb632882cb73e5721178d0073e39")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'SetPayload-response)))
   "Returns md5sum for a message object of type 'SetPayload-response"
-  "98b2f6ade618936d2c8998562272cbf5")
+  "7f12eb632882cb73e5721178d0073e39")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetPayload-response>)))
   "Returns full string definition for message of type '<SetPayload-response>"
   (cl:format cl:nil "bool success~%~%~%~%"))

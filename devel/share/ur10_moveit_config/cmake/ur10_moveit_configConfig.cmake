@@ -67,7 +67,7 @@ set(ur10_moveit_config_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ur10_moveit_config_SOURCE_PREFIX /home/jay/my_ws/src/fmauch_universal_robot/ur10_moveit_config)
+  set(ur10_moveit_config_SOURCE_PREFIX /home/jay/my_ws/src/universal_robot/ur10_moveit_config)
   set(ur10_moveit_config_DEVEL_PREFIX /home/jay/my_ws/devel)
   set(ur10_moveit_config_INSTALL_PREFIX "")
   set(ur10_moveit_config_PREFIX ${ur10_moveit_config_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'ur10_moveit_config' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ur10_moveit_config' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jay/my_ws/src/fmauch_universal_robot/ur10_moveit_config/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ur10_moveit_config' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jay/my_ws/src/universal_robot/ur10_moveit_config/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ur10_moveit_config_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jay/my_ws/devel/lib;/home/jay/robotiq_ws/devel/lib;/home/jay/gpd_ws/devel/lib;/home/jay/ork_ws/devel/lib;/home/jay/realsense_ws/devel/lib;/home/jay/my_ws/devel/lib;/home/jay/ur_ws/devel/lib;/home/jay/ros_web_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/jay/my_ws/devel/lib;/home/jay/grasp_ws/devel/lib;/home/jay/robotiq_ws/devel/lib;/home/jay/gpd_ws/devel/lib;/home/jay/ork_ws/devel/lib;/home/jay/realsense_ws/devel/lib;/home/jay/my_ws/devel/lib;/home/jay/ur_ws/devel/lib;/home/jay/ros_web_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

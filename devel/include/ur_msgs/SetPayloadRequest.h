@@ -15,7 +15,6 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
-#include <geometry_msgs/Vector3.h>
 
 namespace ur_msgs
 {
@@ -25,12 +24,10 @@ struct SetPayloadRequest_
   typedef SetPayloadRequest_<ContainerAllocator> Type;
 
   SetPayloadRequest_()
-    : payload(0.0)
-    , center_of_gravity()  {
+    : payload(0.0)  {
     }
   SetPayloadRequest_(const ContainerAllocator& _alloc)
-    : payload(0.0)
-    , center_of_gravity(_alloc)  {
+    : payload(0.0)  {
   (void)_alloc;
     }
 
@@ -38,9 +35,6 @@ struct SetPayloadRequest_
 
    typedef float _payload_type;
   _payload_type payload;
-
-   typedef  ::geometry_msgs::Vector3_<ContainerAllocator>  _center_of_gravity_type;
-  _center_of_gravity_type center_of_gravity;
 
 
 
@@ -77,7 +71,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'ur_msgs': ['/home/jay/my_ws/src/fmauch_universal_robot/ur_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'ur_msgs': ['/home/jay/my_ws/src/universal_robot/ur_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -120,12 +114,12 @@ struct MD5Sum< ::ur_msgs::SetPayloadRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "3fb05883ed2c985331004a717cd96a56";
+    return "d12269f931817591aa52047629ca66ca";
   }
 
   static const char* value(const ::ur_msgs::SetPayloadRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x3fb05883ed2c9853ULL;
-  static const uint64_t static_value2 = 0x31004a717cd96a56ULL;
+  static const uint64_t static_value1 = 0xd12269f931817591ULL;
+  static const uint64_t static_value2 = 0xaa52047629ca66caULL;
 };
 
 template<class ContainerAllocator>
@@ -145,20 +139,6 @@ struct Definition< ::ur_msgs::SetPayloadRequest_<ContainerAllocator> >
   static const char* value()
   {
     return "float32 payload\n\
-geometry_msgs/Vector3 center_of_gravity\n\
-\n\
-================================================================================\n\
-MSG: geometry_msgs/Vector3\n\
-# This represents a vector in free space. \n\
-# It is only meant to represent a direction. Therefore, it does not\n\
-# make sense to apply a translation to it (e.g., when applying a \n\
-# generic rigid transformation to a Vector3, tf2 will only apply the\n\
-# rotation). If you want your data to be translatable too, use the\n\
-# geometry_msgs/Point message instead.\n\
-\n\
-float64 x\n\
-float64 y\n\
-float64 z\n\
 ";
   }
 
@@ -178,7 +158,6 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.payload);
-      stream.next(m.center_of_gravity);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -199,9 +178,6 @@ struct Printer< ::ur_msgs::SetPayloadRequest_<ContainerAllocator> >
   {
     s << indent << "payload: ";
     Printer<float>::stream(s, indent + "  ", v.payload);
-    s << indent << "center_of_gravity: ";
-    s << std::endl;
-    Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.center_of_gravity);
   }
 };
 
