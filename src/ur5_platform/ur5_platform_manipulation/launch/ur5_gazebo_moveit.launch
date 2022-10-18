@@ -1,5 +1,6 @@
 <launch>
 	<include file="$(find ur_gazebo)/launch/ur5.launch">
+		<arg name="limited" value="false"/>
 	</include>
 
 	<include file="$(find ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">

@@ -1,0 +1,2 @@
+gazebo仿真：roslaunch ur5_platform_manipulation ur5_gazebo_moveit.launch 
+真实ur5启动：roslaunch ur5_platform_manipulation ur5_real_moveit.launch

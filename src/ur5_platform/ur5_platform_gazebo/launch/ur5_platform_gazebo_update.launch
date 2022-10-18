@@ -4,7 +4,7 @@
   <arg name="gui" default="true"/>
   <arg name="debug" default="false"/>
   <arg name="limited" default="false" doc="If true, limits joint range [-PI, PI] on all joints." />
-  <!--arg name="robot_description_file" default="$(find ur_description)/launch/ur3_upload.launch" doc="Robot description launch file."/-->
+  <!--arg name="robot_description_file" default="$(find ur_description)/launch/ur3_upload.launch" doc="Robot description launch file."-->
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="$(find ur5_platform_gazebo)/worlds/demo_test.world"/>

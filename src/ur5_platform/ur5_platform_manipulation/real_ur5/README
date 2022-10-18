@@ -2,3 +2,6 @@
 rosrun ur5_platform_manipulation ur5_grasp_posture_estimation.py
 自适应抓取力调节
 rosrun ur5_platform_manipulation ur5_grasp_force_adjustment.py
+
+获得当前关节角
+rosrun ur5_platform_manipulation ur5_get_joint.py
