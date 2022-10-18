@@ -2,4 +2,4 @@ find_object_2d: 古月居书中的
 gazebo_grasp_plugin: gazebo中的抓取插件
 universal_robot: ur机器人模型
 ur5_ikfast_manipulator_plugin: ikfast运动学插件
-ur5_platform: 学习机器人仿真用的，如果报错请删除universal_robot文件夹并找到备份的fmauch_universal_robot进行替换
+ur5_platform: 学习机器人仿真用的，如果报错请删除universal_robot文件夹并找到备份的fmauch_universal_robot进行替换 
