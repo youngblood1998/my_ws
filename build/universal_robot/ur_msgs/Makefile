@@ -56,16 +56,6 @@ CMAKE_BINARY_DIR = /home/jay/my_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -78,6 +68,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,17 +88,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -111,16 +100,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/local/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -132,6 +121,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -301,19 +301,19 @@ ur_msgs_generate_messages_lisp/fast:
 .PHONY : ur_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
-.PHONY : universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
+universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
+.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
 
 # Convenience name for target.
-ur_msgs_gencpp: universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
+_ur_msgs_generate_messages_check_deps_ToolDataMsg: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
 
-.PHONY : ur_msgs_gencpp
+.PHONY : _ur_msgs_generate_messages_check_deps_ToolDataMsg
 
 # fast build rule for target.
-ur_msgs_gencpp/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/build.make universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/build
-.PHONY : ur_msgs_gencpp/fast
+_ur_msgs_generate_messages_check_deps_ToolDataMsg/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/build
+.PHONY : _ur_msgs_generate_messages_check_deps_ToolDataMsg/fast
 
 # Convenience name for target.
 universal_robot/ur_msgs/CMakeFiles/ur_msgs_generate_messages.dir/rule:
@@ -331,49 +331,19 @@ ur_msgs_generate_messages/fast:
 .PHONY : ur_msgs_generate_messages/fast
 
 # Convenience name for target.
-universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
-.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
+universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
+.PHONY : universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
 
 # Convenience name for target.
-_ur_msgs_generate_messages_check_deps_SetIO: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
+ur_msgs_gencpp: universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/rule
 
-.PHONY : _ur_msgs_generate_messages_check_deps_SetIO
+.PHONY : ur_msgs_gencpp
 
 # fast build rule for target.
-_ur_msgs_generate_messages_check_deps_SetIO/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/build
-.PHONY : _ur_msgs_generate_messages_check_deps_SetIO/fast
-
-# Convenience name for target.
-universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
-.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
-
-# Convenience name for target.
-_ur_msgs_generate_messages_check_deps_ToolDataMsg: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/rule
-
-.PHONY : _ur_msgs_generate_messages_check_deps_ToolDataMsg
-
-# fast build rule for target.
-_ur_msgs_generate_messages_check_deps_ToolDataMsg/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_ToolDataMsg.dir/build
-.PHONY : _ur_msgs_generate_messages_check_deps_ToolDataMsg/fast
-
-# Convenience name for target.
-universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
-.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
-
-# Convenience name for target.
-_ur_msgs_generate_messages_check_deps_Analog: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
-
-.PHONY : _ur_msgs_generate_messages_check_deps_Analog
-
-# fast build rule for target.
-_ur_msgs_generate_messages_check_deps_Analog/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/build
-.PHONY : _ur_msgs_generate_messages_check_deps_Analog/fast
+ur_msgs_gencpp/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/build.make universal_robot/ur_msgs/CMakeFiles/ur_msgs_gencpp.dir/build
+.PHONY : ur_msgs_gencpp/fast
 
 # Convenience name for target.
 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetPayload.dir/rule:
@@ -389,6 +359,21 @@ _ur_msgs_generate_messages_check_deps_SetPayload: universal_robot/ur_msgs/CMakeF
 _ur_msgs_generate_messages_check_deps_SetPayload/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetPayload.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetPayload.dir/build
 .PHONY : _ur_msgs_generate_messages_check_deps_SetPayload/fast
+
+# Convenience name for target.
+universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
+.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
+
+# Convenience name for target.
+_ur_msgs_generate_messages_check_deps_Analog: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/rule
+
+.PHONY : _ur_msgs_generate_messages_check_deps_Analog
+
+# fast build rule for target.
+_ur_msgs_generate_messages_check_deps_Analog/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_Analog.dir/build
+.PHONY : _ur_msgs_generate_messages_check_deps_Analog/fast
 
 # Convenience name for target.
 universal_robot/ur_msgs/CMakeFiles/ur_msgs_generate_messages_cpp.dir/rule:
@@ -480,17 +465,32 @@ ur_msgs_generate_messages_py/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/ur_msgs_generate_messages_py.dir/build.make universal_robot/ur_msgs/CMakeFiles/ur_msgs_generate_messages_py.dir/build
 .PHONY : ur_msgs_generate_messages_py/fast
 
+# Convenience name for target.
+universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
+.PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
+
+# Convenience name for target.
+_ur_msgs_generate_messages_check_deps_SetIO: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/rule
+
+.PHONY : _ur_msgs_generate_messages_check_deps_SetIO
+
+# fast build rule for target.
+_ur_msgs_generate_messages_check_deps_SetIO/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/build.make universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_SetIO.dir/build
+.PHONY : _ur_msgs_generate_messages_check_deps_SetIO/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... _ur_msgs_generate_messages_check_deps_RobotStateRTMsg"
 	@echo "... _ur_msgs_generate_messages_check_deps_SetSpeedSliderFraction"
 	@echo "... ur_msgs_genpy"
@@ -500,13 +500,11 @@ help:
 	@echo "... ur_msgs_genlisp"
 	@echo "... _ur_msgs_generate_messages_check_deps_RobotModeDataMsg"
 	@echo "... ur_msgs_generate_messages_lisp"
-	@echo "... ur_msgs_gencpp"
-	@echo "... ur_msgs_generate_messages"
-	@echo "... install/local"
-	@echo "... _ur_msgs_generate_messages_check_deps_SetIO"
 	@echo "... _ur_msgs_generate_messages_check_deps_ToolDataMsg"
-	@echo "... _ur_msgs_generate_messages_check_deps_Analog"
+	@echo "... ur_msgs_generate_messages"
+	@echo "... ur_msgs_gencpp"
 	@echo "... _ur_msgs_generate_messages_check_deps_SetPayload"
+	@echo "... _ur_msgs_generate_messages_check_deps_Analog"
 	@echo "... ur_msgs_generate_messages_cpp"
 	@echo "... _ur_msgs_generate_messages_check_deps_Digital"
 	@echo "... ur_msgs_generate_messages_eus"
@@ -514,6 +512,8 @@ help:
 	@echo "... ur_msgs_gennodejs"
 	@echo "... ur_msgs_generate_messages_py"
 	@echo "... install/strip"
+	@echo "... _ur_msgs_generate_messages_check_deps_SetIO"
+	@echo "... install/local"
 .PHONY : help
 
 

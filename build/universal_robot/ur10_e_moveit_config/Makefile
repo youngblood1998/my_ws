@@ -79,17 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -133,6 +122,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/jay/my_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jay/my_ws/build/CMakeFiles /home/jay/my_ws/build/universal_robot/ur10_e_moveit_config/CMakeFiles/progress.marks
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
+.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
+
+# Convenience name for target.
+run_tests_ur10_e_moveit_config: universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
+
+.PHONY : run_tests_ur10_e_moveit_config
+
+# fast build rule for target.
+run_tests_ur10_e_moveit_config/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/build
+.PHONY : run_tests_ur10_e_moveit_config/fast
+
+# Convenience name for target.
 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
 .PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
@@ -181,19 +196,34 @@ run_tests_ur10_e_moveit_config_roslaunch-check/fast:
 .PHONY : run_tests_ur10_e_moveit_config_roslaunch-check/fast
 
 # Convenience name for target.
-universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
-.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
+universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
+.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
 
 # Convenience name for target.
-run_tests_ur10_e_moveit_config: universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/rule
+run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml: universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
 
-.PHONY : run_tests_ur10_e_moveit_config
+.PHONY : run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml
 
 # fast build rule for target.
-run_tests_ur10_e_moveit_config/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config.dir/build
-.PHONY : run_tests_ur10_e_moveit_config/fast
+run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/build
+.PHONY : run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml/fast
+
+# Convenience name for target.
+universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
+.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_ur10_e_moveit_config_roslaunch-check: universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_ur10_e_moveit_config_roslaunch-check
+
+# fast build rule for target.
+_run_tests_ur10_e_moveit_config_roslaunch-check/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/build
+.PHONY : _run_tests_ur10_e_moveit_config_roslaunch-check/fast
 
 # Convenience name for target.
 universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule:
@@ -226,36 +256,6 @@ _run_tests_ur10_e_moveit_config/fast:
 .PHONY : _run_tests_ur10_e_moveit_config/fast
 
 # Convenience name for target.
-universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
-.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
-
-# Convenience name for target.
-_run_tests_ur10_e_moveit_config_roslaunch-check: universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/rule
-
-.PHONY : _run_tests_ur10_e_moveit_config_roslaunch-check
-
-# fast build rule for target.
-_run_tests_ur10_e_moveit_config_roslaunch-check/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/_run_tests_ur10_e_moveit_config_roslaunch-check.dir/build
-.PHONY : _run_tests_ur10_e_moveit_config_roslaunch-check/fast
-
-# Convenience name for target.
-universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
-.PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
-
-# Convenience name for target.
-run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml: universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/rule
-
-.PHONY : run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml
-
-# fast build rule for target.
-run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/build.make universal_robot/ur10_e_moveit_config/CMakeFiles/run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml.dir/build
-.PHONY : run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml/fast
-
-# Convenience name for target.
 universal_robot/ur10_e_moveit_config/CMakeFiles/clean_test_results_ur10_e_moveit_config.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur10_e_moveit_config/CMakeFiles/clean_test_results_ur10_e_moveit_config.dir/rule
 .PHONY : universal_robot/ur10_e_moveit_config/CMakeFiles/clean_test_results_ur10_e_moveit_config.dir/rule
@@ -278,18 +278,18 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... run_tests_ur10_e_moveit_config_roslaunch-check"
 	@echo "... run_tests_ur10_e_moveit_config"
-	@echo "... _run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml"
-	@echo "... test"
-	@echo "... _run_tests_ur10_e_moveit_config"
-	@echo "... _run_tests_ur10_e_moveit_config_roslaunch-check"
+	@echo "... run_tests_ur10_e_moveit_config_roslaunch-check"
 	@echo "... run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml"
+	@echo "... _run_tests_ur10_e_moveit_config_roslaunch-check"
+	@echo "... test"
+	@echo "... _run_tests_ur10_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml"
+	@echo "... _run_tests_ur10_e_moveit_config"
 	@echo "... list_install_components"
 	@echo "... clean_test_results_ur10_e_moveit_config"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
 .PHONY : help
 
 

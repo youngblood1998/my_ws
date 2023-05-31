@@ -56,16 +56,6 @@ CMAKE_BINARY_DIR = /home/jay/my_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -77,6 +67,16 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -196,36 +196,6 @@ std_srvs_generate_messages_cpp/fast:
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
-gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
-.PHONY : gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
-
-# Convenience name for target.
-gazebo_grasp_fix: gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
-
-.PHONY : gazebo_grasp_fix
-
-# fast build rule for target.
-gazebo_grasp_fix/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build
-.PHONY : gazebo_grasp_fix/fast
-
-# Convenience name for target.
-gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-.PHONY : gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_nodejs: gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
-.PHONY : trajectory_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 gazebo_grasp_plugin/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_plugin/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
@@ -254,6 +224,21 @@ trajectory_msgs_generate_messages_eus: gazebo_grasp_plugin/CMakeFiles/trajectory
 trajectory_msgs_generate_messages_eus/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_plugin/CMakeFiles/gazebo_ros_gencfg.dir/rule:
@@ -344,21 +329,6 @@ std_srvs_generate_messages_lisp: gazebo_grasp_plugin/CMakeFiles/std_srvs_generat
 std_srvs_generate_messages_lisp/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make gazebo_grasp_plugin/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_plugin/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
@@ -481,6 +451,36 @@ trajectory_msgs_generate_messages_cpp/fast:
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+.PHONY : gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_nodejs: gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_nodejs/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
+.PHONY : gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
+
+# Convenience name for target.
+gazebo_grasp_fix: gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
+
+.PHONY : gazebo_grasp_fix
+
+# fast build rule for target.
+gazebo_grasp_fix/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build
+.PHONY : gazebo_grasp_fix/fast
+
+# Convenience name for target.
 gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_plugin/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
@@ -570,25 +570,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... gazebo_grasp_fix"
-	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... gazebo_ros_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... gazebo_msgs_generate_messages_cpp"
@@ -598,6 +596,8 @@ help:
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... gazebo_grasp_fix"
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... src/GazeboGraspFix.o"

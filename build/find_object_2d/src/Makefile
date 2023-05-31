@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/jay/my_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -66,27 +78,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -110,28 +111,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : rebuild_cache/fast
+.PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,34 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-find_object_2d/src/CMakeFiles/tf_example.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/tf_example.dir/rule
-.PHONY : find_object_2d/src/CMakeFiles/tf_example.dir/rule
+find_object_2d/src/CMakeFiles/find_object.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/find_object.dir/rule
+.PHONY : find_object_2d/src/CMakeFiles/find_object.dir/rule
 
 # Convenience name for target.
-tf_example: find_object_2d/src/CMakeFiles/tf_example.dir/rule
+find_object: find_object_2d/src/CMakeFiles/find_object.dir/rule
 
-.PHONY : tf_example
+.PHONY : find_object
 
 # fast build rule for target.
-tf_example/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/tf_example.dir/build.make find_object_2d/src/CMakeFiles/tf_example.dir/build
-.PHONY : tf_example/fast
-
-# Convenience name for target.
-find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
-.PHONY : find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
-
-# Convenience name for target.
-print_objects_detected: find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
-
-.PHONY : print_objects_detected
-
-# fast build rule for target.
-print_objects_detected/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/print_objects_detected.dir/build.make find_object_2d/src/CMakeFiles/print_objects_detected.dir/build
-.PHONY : print_objects_detected/fast
+find_object/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/find_object.dir/build.make find_object_2d/src/CMakeFiles/find_object.dir/build
+.PHONY : find_object/fast
 
 # Convenience name for target.
 find_object_2d/src/CMakeFiles/find_object_2d.dir/rule:
@@ -211,19 +196,34 @@ find_object_2d/fast:
 .PHONY : find_object_2d/fast
 
 # Convenience name for target.
-find_object_2d/src/CMakeFiles/find_object.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/find_object.dir/rule
-.PHONY : find_object_2d/src/CMakeFiles/find_object.dir/rule
+find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
+.PHONY : find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
 
 # Convenience name for target.
-find_object: find_object_2d/src/CMakeFiles/find_object.dir/rule
+print_objects_detected: find_object_2d/src/CMakeFiles/print_objects_detected.dir/rule
 
-.PHONY : find_object
+.PHONY : print_objects_detected
 
 # fast build rule for target.
-find_object/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/find_object.dir/build.make find_object_2d/src/CMakeFiles/find_object.dir/build
-.PHONY : find_object/fast
+print_objects_detected/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/print_objects_detected.dir/build.make find_object_2d/src/CMakeFiles/print_objects_detected.dir/build
+.PHONY : print_objects_detected/fast
+
+# Convenience name for target.
+find_object_2d/src/CMakeFiles/tf_example.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 find_object_2d/src/CMakeFiles/tf_example.dir/rule
+.PHONY : find_object_2d/src/CMakeFiles/tf_example.dir/rule
+
+# Convenience name for target.
+tf_example: find_object_2d/src/CMakeFiles/tf_example.dir/rule
+
+.PHONY : tf_example
+
+# fast build rule for target.
+tf_example/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f find_object_2d/src/CMakeFiles/tf_example.dir/build.make find_object_2d/src/CMakeFiles/tf_example.dir/build
+.PHONY : tf_example/fast
 
 AboutDialog.o: AboutDialog.cpp.o
 
@@ -1446,17 +1446,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... tf_example"
-	@echo "... print_objects_detected"
-	@echo "... find_object_2d"
-	@echo "... find_object"
+	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... install"
+	@echo "... find_object"
+	@echo "... find_object_2d"
+	@echo "... print_objects_detected"
+	@echo "... tf_example"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... AboutDialog.o"
 	@echo "... AboutDialog.i"
 	@echo "... AboutDialog.s"

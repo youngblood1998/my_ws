@@ -3,6 +3,6 @@ prefix=/home/jay/my_ws/devel
 Name: ur_modern_driver
 Description: Description of ur_modern_driver
 Version: 0.0.1
-Cflags: -I/home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver/include
+Cflags: -I/home/jay/my_ws/src/universal_robot/ur_modern_driver/include
 Libs: -L${prefix}/lib 
 Requires: hardware_interface controller_manager actionlib control_msgs geometry_msgs roscpp sensor_msgs trajectory_msgs ur_msgs

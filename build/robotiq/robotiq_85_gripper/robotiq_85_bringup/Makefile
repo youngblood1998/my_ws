@@ -166,51 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-
-# Convenience name for target.
-_run_tests_robotiq_85_bringup_roslaunch-check: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-
-.PHONY : _run_tests_robotiq_85_bringup_roslaunch-check
-
-# fast build rule for target.
-_run_tests_robotiq_85_bringup_roslaunch-check/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/build
-.PHONY : _run_tests_robotiq_85_bringup_roslaunch-check/fast
-
-# Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-
-# Convenience name for target.
-run_tests_robotiq_85_bringup_roslaunch-check: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
-
-.PHONY : run_tests_robotiq_85_bringup_roslaunch-check
-
-# fast build rule for target.
-run_tests_robotiq_85_bringup_roslaunch-check/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/build
-.PHONY : run_tests_robotiq_85_bringup_roslaunch-check/fast
-
-# Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
-
-# Convenience name for target.
-_run_tests_robotiq_85_bringup: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
-
-.PHONY : _run_tests_robotiq_85_bringup
-
-# fast build rule for target.
-_run_tests_robotiq_85_bringup/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/build
-.PHONY : _run_tests_robotiq_85_bringup/fast
-
-# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule
@@ -256,6 +211,51 @@ clean_test_results_robotiq_85_bringup/fast:
 .PHONY : clean_test_results_robotiq_85_bringup/fast
 
 # Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_robotiq_85_bringup_roslaunch-check: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_robotiq_85_bringup_roslaunch-check
+
+# fast build rule for target.
+_run_tests_robotiq_85_bringup_roslaunch-check/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check.dir/build
+.PHONY : _run_tests_robotiq_85_bringup_roslaunch-check/fast
+
+# Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_robotiq_85_bringup_roslaunch-check: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/rule
+
+.PHONY : run_tests_robotiq_85_bringup_roslaunch-check
+
+# fast build rule for target.
+run_tests_robotiq_85_bringup_roslaunch-check/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/run_tests_robotiq_85_bringup_roslaunch-check.dir/build
+.PHONY : run_tests_robotiq_85_bringup_roslaunch-check/fast
+
+# Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
+
+# Convenience name for target.
+_run_tests_robotiq_85_bringup: robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/rule
+
+.PHONY : _run_tests_robotiq_85_bringup
+
+# fast build rule for target.
+_run_tests_robotiq_85_bringup/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup.dir/build
+.PHONY : _run_tests_robotiq_85_bringup/fast
+
+# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/_run_tests_robotiq_85_bringup_roslaunch-check_launch.dir/rule
@@ -277,16 +277,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... run_tests_robotiq_85_bringup_roslaunch-check_launch"
+	@echo "... run_tests_robotiq_85_bringup"
+	@echo "... clean_test_results_robotiq_85_bringup"
 	@echo "... _run_tests_robotiq_85_bringup_roslaunch-check"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... edit_cache"
 	@echo "... run_tests_robotiq_85_bringup_roslaunch-check"
+	@echo "... edit_cache"
 	@echo "... _run_tests_robotiq_85_bringup"
-	@echo "... run_tests_robotiq_85_bringup_roslaunch-check_launch"
-	@echo "... run_tests_robotiq_85_bringup"
-	@echo "... clean_test_results_robotiq_85_bringup"
 	@echo "... install"
 	@echo "... _run_tests_robotiq_85_bringup_roslaunch-check_launch"
 	@echo "... test"

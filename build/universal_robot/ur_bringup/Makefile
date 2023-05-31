@@ -79,17 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -121,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+.PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+
+# Convenience name for target.
+run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+
+.PHONY : run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml
+
+# fast build rule for target.
+run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build.make universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build
+.PHONY : run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml/fast
+
+# Convenience name for target.
 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/rule
 .PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/rule
@@ -179,21 +194,6 @@ _run_tests_ur_bringup_roslaunch-check: universal_robot/ur_bringup/CMakeFiles/_ru
 _run_tests_ur_bringup_roslaunch-check/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/build.make universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/build
 .PHONY : _run_tests_ur_bringup_roslaunch-check/fast
-
-# Convenience name for target.
-universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
-.PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
-
-# Convenience name for target.
-_run_tests_ur_bringup: universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
-
-.PHONY : _run_tests_ur_bringup
-
-# fast build rule for target.
-_run_tests_ur_bringup/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/build.make universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/build
-.PHONY : _run_tests_ur_bringup/fast
 
 # Convenience name for target.
 universal_robot/ur_bringup/CMakeFiles/clean_test_results_ur_bringup.dir/rule:
@@ -241,19 +241,19 @@ run_tests_ur_bringup/fast:
 .PHONY : run_tests_ur_bringup/fast
 
 # Convenience name for target.
-universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
-.PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
+.PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
 
 # Convenience name for target.
-run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+_run_tests_ur_bringup: universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/rule
 
-.PHONY : run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml
+.PHONY : _run_tests_ur_bringup
 
 # fast build rule for target.
-run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build.make universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build
-.PHONY : run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml/fast
+_run_tests_ur_bringup/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/build.make universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup.dir/build
+.PHONY : _run_tests_ur_bringup/fast
 
 # Convenience name for target.
 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
@@ -278,17 +278,17 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml"
 	@echo "... _run_tests_ur_bringup_roslaunch-check"
+	@echo "... clean_test_results_ur_bringup"
+	@echo "... run_tests_ur_bringup_roslaunch-check"
+	@echo "... run_tests_ur_bringup"
 	@echo "... _run_tests_ur_bringup"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... clean_test_results_ur_bringup"
-	@echo "... run_tests_ur_bringup_roslaunch-check"
-	@echo "... run_tests_ur_bringup"
-	@echo "... run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml"
 	@echo "... _run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml"
+	@echo "... edit_cache"
 	@echo "... test"
 .PHONY : help
 

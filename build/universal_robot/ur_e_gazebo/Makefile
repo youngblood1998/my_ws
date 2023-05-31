@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -133,6 +122,17 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/jay/my_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jay/my_ws/build/CMakeFiles /home/jay/my_ws/build/universal_robot/ur_e_gazebo/CMakeFiles/progress.marks
@@ -166,51 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-
-# Convenience name for target.
-_run_tests_ur_e_gazebo_roslaunch-check: universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-
-.PHONY : _run_tests_ur_e_gazebo_roslaunch-check
-
-# fast build rule for target.
-_run_tests_ur_e_gazebo_roslaunch-check/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/build
-.PHONY : _run_tests_ur_e_gazebo_roslaunch-check/fast
-
-# Convenience name for target.
-universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-
-# Convenience name for target.
-run_tests_ur_e_gazebo_roslaunch-check: universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
-
-.PHONY : run_tests_ur_e_gazebo_roslaunch-check
-
-# fast build rule for target.
-run_tests_ur_e_gazebo_roslaunch-check/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/build
-.PHONY : run_tests_ur_e_gazebo_roslaunch-check/fast
-
-# Convenience name for target.
-universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
-.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
-
-# Convenience name for target.
-_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
-
-.PHONY : _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml
-
-# fast build rule for target.
-_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/build
-.PHONY : _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml/fast
-
-# Convenience name for target.
 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo.dir/rule
 .PHONY : universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo.dir/rule
@@ -224,6 +179,21 @@ _run_tests_ur_e_gazebo: universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_g
 _run_tests_ur_e_gazebo/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo.dir/build
 .PHONY : _run_tests_ur_e_gazebo/fast
+
+# Convenience name for target.
+universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_ur_e_gazebo_roslaunch-check: universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_ur_e_gazebo_roslaunch-check
+
+# fast build rule for target.
+_run_tests_ur_e_gazebo_roslaunch-check/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check.dir/build
+.PHONY : _run_tests_ur_e_gazebo_roslaunch-check/fast
 
 # Convenience name for target.
 universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
@@ -256,6 +226,36 @@ run_tests_ur_e_gazebo/fast:
 .PHONY : run_tests_ur_e_gazebo/fast
 
 # Convenience name for target.
+universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_ur_e_gazebo_roslaunch-check: universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/rule
+
+.PHONY : run_tests_ur_e_gazebo_roslaunch-check
+
+# fast build rule for target.
+run_tests_ur_e_gazebo_roslaunch-check/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/run_tests_ur_e_gazebo_roslaunch-check.dir/build
+.PHONY : run_tests_ur_e_gazebo_roslaunch-check/fast
+
+# Convenience name for target.
+universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+.PHONY : universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+
+# Convenience name for target.
+_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/rule
+
+.PHONY : _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml
+
+# fast build rule for target.
+_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/build.make universal_robot/ur_e_gazebo/CMakeFiles/_run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml.dir/build
+.PHONY : _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml/fast
+
+# Convenience name for target.
 universal_robot/ur_e_gazebo/CMakeFiles/clean_test_results_ur_e_gazebo.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_e_gazebo/CMakeFiles/clean_test_results_ur_e_gazebo.dir/rule
 .PHONY : universal_robot/ur_e_gazebo/CMakeFiles/clean_test_results_ur_e_gazebo.dir/rule
@@ -277,19 +277,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... _run_tests_ur_e_gazebo_roslaunch-check"
-	@echo "... run_tests_ur_e_gazebo_roslaunch-check"
-	@echo "... _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml"
 	@echo "... install"
 	@echo "... _run_tests_ur_e_gazebo"
+	@echo "... _run_tests_ur_e_gazebo_roslaunch-check"
 	@echo "... run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml"
 	@echo "... run_tests_ur_e_gazebo"
 	@echo "... install/local"
+	@echo "... run_tests_ur_e_gazebo_roslaunch-check"
+	@echo "... _run_tests_ur_e_gazebo_roslaunch-check_tests_roslaunch_test.xml"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... clean_test_results_ur_e_gazebo"
 	@echo "... test"
+	@echo "... edit_cache"
 .PHONY : help
 
 

@@ -68,27 +68,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -99,17 +78,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -122,6 +90,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -132,6 +111,27 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
+
+# Convenience name for target.
+robot_state_helper: Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
+
+.PHONY : robot_state_helper
+
+# fast build rule for target.
+robot_state_helper/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/build.make Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/build
+.PHONY : robot_state_helper/fast
+
+# Convenience name for target.
 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_node.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_node.dir/rule
 .PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_node.dir/rule
@@ -196,21 +211,6 @@ dashboard_client/fast:
 .PHONY : dashboard_client/fast
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
-
-# Convenience name for target.
-ur_robot_driver_plugin: Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
-
-.PHONY : ur_robot_driver_plugin
-
-# fast build rule for target.
-ur_robot_driver_plugin/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/build.make Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/build
-.PHONY : ur_robot_driver_plugin/fast
-
-# Convenience name for target.
 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver.dir/rule
 .PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver.dir/rule
@@ -226,19 +226,19 @@ ur_robot_driver/fast:
 .PHONY : ur_robot_driver/fast
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
+Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
 
 # Convenience name for target.
-robot_state_helper: Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/rule
+ur_robot_driver_plugin: Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/rule
 
-.PHONY : robot_state_helper
+.PHONY : ur_robot_driver_plugin
 
 # fast build rule for target.
-robot_state_helper/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/build.make Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/robot_state_helper.dir/build
-.PHONY : robot_state_helper/fast
+ur_robot_driver_plugin/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/build.make Universal_Robots_ROS_Driver/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/build
+.PHONY : ur_robot_driver_plugin/fast
 
 src/comm/server.o: src/comm/server.cpp.o
 
@@ -1011,18 +1011,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... ur_robot_driver_node"
-	@echo "... dashboard_client"
-	@echo "... ur_robot_driver_plugin"
-	@echo "... ur_robot_driver"
 	@echo "... install"
 	@echo "... robot_state_helper"
-	@echo "... list_install_components"
-	@echo "... install/strip"
+	@echo "... ur_robot_driver_node"
+	@echo "... dashboard_client"
+	@echo "... ur_robot_driver"
+	@echo "... ur_robot_driver_plugin"
 	@echo "... install/local"
-	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... src/comm/server.o"
 	@echo "... src/comm/server.i"
 	@echo "... src/comm/server.s"

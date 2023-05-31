@@ -211,21 +211,6 @@ run_tests_robotiq_85_description_roslaunch-check/fast:
 .PHONY : run_tests_robotiq_85_description_roslaunch-check/fast
 
 # Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
-
-# Convenience name for target.
-_run_tests_robotiq_85_description: robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
-
-.PHONY : _run_tests_robotiq_85_description
-
-# fast build rule for target.
-_run_tests_robotiq_85_description/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/build
-.PHONY : _run_tests_robotiq_85_description/fast
-
-# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/run_tests_robotiq_85_description.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/run_tests_robotiq_85_description.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/run_tests_robotiq_85_description.dir/rule
@@ -239,6 +224,21 @@ run_tests_robotiq_85_description: robotiq/robotiq_85_gripper/robotiq_85_descript
 run_tests_robotiq_85_description/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/run_tests_robotiq_85_description.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/run_tests_robotiq_85_description.dir/build
 .PHONY : run_tests_robotiq_85_description/fast
+
+# Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
+
+# Convenience name for target.
+_run_tests_robotiq_85_description: robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/rule
+
+.PHONY : _run_tests_robotiq_85_description
+
+# fast build rule for target.
+_run_tests_robotiq_85_description/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description.dir/build
+.PHONY : _run_tests_robotiq_85_description/fast
 
 # Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_description/CMakeFiles/_run_tests_robotiq_85_description_roslaunch-check_launch.dir/rule:
@@ -278,13 +278,13 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... _run_tests_robotiq_85_description_roslaunch-check"
 	@echo "... clean_test_results_robotiq_85_description"
 	@echo "... run_tests_robotiq_85_description_roslaunch-check"
+	@echo "... run_tests_robotiq_85_description"
+	@echo "... edit_cache"
 	@echo "... _run_tests_robotiq_85_description"
 	@echo "... test"
-	@echo "... run_tests_robotiq_85_description"
 	@echo "... _run_tests_robotiq_85_description_roslaunch-check_launch"
 	@echo "... list_install_components"
 	@echo "... run_tests_robotiq_85_description_roslaunch-check_launch"

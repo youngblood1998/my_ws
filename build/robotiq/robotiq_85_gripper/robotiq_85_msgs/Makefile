@@ -68,17 +68,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -89,6 +78,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -181,6 +181,36 @@ robotiq_85_msgs_genpy/fast:
 .PHONY : robotiq_85_msgs_genpy/fast
 
 # Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
+
+# Convenience name for target.
+robotiq_85_msgs_gencpp: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
+
+.PHONY : robotiq_85_msgs_gencpp
+
+# fast build rule for target.
+robotiq_85_msgs_gencpp/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build
+.PHONY : robotiq_85_msgs_gencpp/fast
+
+# Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+robotiq_85_msgs_generate_messages_cpp: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : robotiq_85_msgs_generate_messages_cpp
+
+# fast build rule for target.
+robotiq_85_msgs_generate_messages_cpp/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build
+.PHONY : robotiq_85_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule
@@ -226,21 +256,6 @@ _robotiq_85_msgs_generate_messages_check_deps_GripperStat/fast:
 .PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperStat/fast
 
 # Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-
-# Convenience name for target.
-_robotiq_85_msgs_generate_messages_check_deps_GripperCmd: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-
-.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd
-
-# fast build rule for target.
-_robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build
-.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast
-
-# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule
@@ -271,34 +286,19 @@ robotiq_85_msgs_geneus/fast:
 .PHONY : robotiq_85_msgs_geneus/fast
 
 # Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
 
 # Convenience name for target.
-robotiq_85_msgs_generate_messages_cpp: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+_robotiq_85_msgs_generate_messages_check_deps_GripperCmd: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
 
-.PHONY : robotiq_85_msgs_generate_messages_cpp
+.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd
 
 # fast build rule for target.
-robotiq_85_msgs_generate_messages_cpp/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build
-.PHONY : robotiq_85_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-robotiq_85_msgs_gencpp: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
-
-.PHONY : robotiq_85_msgs_gencpp
-
-# fast build rule for target.
-robotiq_85_msgs_gencpp/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build
-.PHONY : robotiq_85_msgs_gencpp/fast
+_robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build
+.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast
 
 # Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/rule:
@@ -316,21 +316,6 @@ robotiq_85_msgs_generate_messages_eus/fast:
 .PHONY : robotiq_85_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-robotiq_85_msgs_gennodejs: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
-
-.PHONY : robotiq_85_msgs_gennodejs
-
-# fast build rule for target.
-robotiq_85_msgs_gennodejs/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build
-.PHONY : robotiq_85_msgs_gennodejs/fast
-
-# Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule
@@ -344,6 +329,21 @@ robotiq_85_msgs_generate_messages_lisp: robotiq/robotiq_85_gripper/robotiq_85_ms
 robotiq_85_msgs_generate_messages_lisp/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+robotiq_85_msgs_gennodejs: robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
+
+.PHONY : robotiq_85_msgs_gennodejs
+
+# fast build rule for target.
+robotiq_85_msgs_gennodejs/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build.make robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build
+.PHONY : robotiq_85_msgs_gennodejs/fast
 
 # Convenience name for target.
 robotiq/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/rule:
@@ -367,24 +367,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... robotiq_85_msgs_genpy"
+	@echo "... robotiq_85_msgs_gencpp"
+	@echo "... robotiq_85_msgs_generate_messages_cpp"
 	@echo "... robotiq_85_msgs_generate_messages_py"
 	@echo "... robotiq_85_msgs_genlisp"
 	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperStat"
-	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperCmd"
 	@echo "... robotiq_85_msgs_generate_messages"
 	@echo "... robotiq_85_msgs_geneus"
-	@echo "... robotiq_85_msgs_generate_messages_cpp"
-	@echo "... robotiq_85_msgs_gencpp"
+	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperCmd"
 	@echo "... robotiq_85_msgs_generate_messages_eus"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... robotiq_85_msgs_gennodejs"
 	@echo "... robotiq_85_msgs_generate_messages_lisp"
+	@echo "... robotiq_85_msgs_gennodejs"
 	@echo "... robotiq_85_msgs_generate_messages_nodejs"
 .PHONY : help
 

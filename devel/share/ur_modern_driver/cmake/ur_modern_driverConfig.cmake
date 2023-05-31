@@ -67,7 +67,7 @@ set(ur_modern_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ur_modern_driver_SOURCE_PREFIX /home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver)
+  set(ur_modern_driver_SOURCE_PREFIX /home/jay/my_ws/src/universal_robot/ur_modern_driver)
   set(ur_modern_driver_DEVEL_PREFIX /home/jay/my_ws/devel)
   set(ur_modern_driver_INSTALL_PREFIX "")
   set(ur_modern_driver_PREFIX ${ur_modern_driver_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ur_modern_driver_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver/include " STREQUAL " ")
+if(NOT "/home/jay/my_ws/src/universal_robot/ur_modern_driver/include " STREQUAL " ")
   set(ur_modern_driver_INCLUDE_DIRS "")
-  set(_include_dirs "/home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver/include")
+  set(_include_dirs "/home/jay/my_ws/src/universal_robot/ur_modern_driver/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/ur_modern_driver " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver/include " ST
         message(FATAL_ERROR "Project 'ur_modern_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ur_modern_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jay/my_ws/src/fmauch_universal_robot/ur_modern_driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ur_modern_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jay/my_ws/src/universal_robot/ur_modern_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ur_modern_driver_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jay/my_ws/devel/lib;/home/jay/grasp_ws/devel/lib;/home/jay/robotiq_ws/devel/lib;/home/jay/gpd_ws/devel/lib;/home/jay/ork_ws/devel/lib;/home/jay/realsense_ws/devel/lib;/home/jay/my_ws/devel/lib;/home/jay/ur_ws/devel/lib;/home/jay/ros_web_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/jay/my_ws/devel/lib;/home/jay/grasp_ws/devel/lib;/home/jay/xela/devel/lib;/home/jay/robotiq_ws/devel/lib;/home/jay/gpd_ws/devel/lib;/home/jay/ork_ws/devel/lib;/home/jay/realsense_ws/devel/lib;/home/jay/my_ws/devel/lib;/home/jay/ur_ws/devel/lib;/home/jay/ros_web_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

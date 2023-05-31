@@ -79,17 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -121,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -278,7 +278,6 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... _run_tests_ur5_e_moveit_config_roslaunch-check"
 	@echo "... install/strip"
@@ -286,6 +285,7 @@ help:
 	@echo "... run_tests_ur5_e_moveit_config"
 	@echo "... clean_test_results_ur5_e_moveit_config"
 	@echo "... run_tests_ur5_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml"
+	@echo "... edit_cache"
 	@echo "... _run_tests_ur5_e_moveit_config_roslaunch-check_tests_moveit_planning_execution.xml"
 	@echo "... run_tests_ur5_e_moveit_config_roslaunch-check"
 	@echo "... _run_tests_ur5_e_moveit_config"

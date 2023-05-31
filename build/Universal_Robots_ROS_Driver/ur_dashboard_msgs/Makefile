@@ -56,27 +56,6 @@ CMAKE_BINARY_DIR = /home/jay/my_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -88,6 +67,17 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,6 +122,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -376,66 +376,6 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
-
-# Convenience name for target.
-_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
-
-.PHONY : _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction
-
-# fast build rule for target.
-_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/build
-.PHONY : _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-ur_dashboard_msgs_gennodejs: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
-
-.PHONY : ur_dashboard_msgs_gennodejs
-
-# fast build rule for target.
-ur_dashboard_msgs_gennodejs/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/build
-.PHONY : ur_dashboard_msgs_gennodejs/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-ur_dashboard_msgs_generate_messages_py: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
-
-.PHONY : ur_dashboard_msgs_generate_messages_py
-
-# fast build rule for target.
-ur_dashboard_msgs_generate_messages_py/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/build
-.PHONY : ur_dashboard_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_eus: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_eus
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
@@ -556,6 +496,66 @@ _ur_dashboard_msgs_generate_messages_check_deps_IsProgramRunning/fast:
 .PHONY : _ur_dashboard_msgs_generate_messages_check_deps_IsProgramRunning/fast
 
 # Convenience name for target.
+Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
+
+# Convenience name for target.
+_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/rule
+
+.PHONY : _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction
+
+# fast build rule for target.
+_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeAction.dir/build
+.PHONY : _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+ur_dashboard_msgs_gennodejs: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/rule
+
+.PHONY : ur_dashboard_msgs_gennodejs
+
+# fast build rule for target.
+ur_dashboard_msgs_gennodejs/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_gennodejs.dir/build
+.PHONY : ur_dashboard_msgs_gennodejs/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+ur_dashboard_msgs_generate_messages_py: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/rule
+
+.PHONY : ur_dashboard_msgs_generate_messages_py
+
+# fast build rule for target.
+ur_dashboard_msgs_generate_messages_py/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/ur_dashboard_msgs_generate_messages_py.dir/build
+.PHONY : ur_dashboard_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_eus: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -586,21 +586,6 @@ ur_dashboard_msgs_genlisp/fast:
 .PHONY : ur_dashboard_msgs_genlisp/fast
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_AddToLog.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_AddToLog.dir/rule
 .PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_AddToLog.dir/rule
@@ -614,6 +599,21 @@ _ur_dashboard_msgs_generate_messages_check_deps_AddToLog: Universal_Robots_ROS_D
 _ur_dashboard_msgs_generate_messages_check_deps_AddToLog/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_AddToLog.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_AddToLog.dir/build
 .PHONY : _ur_dashboard_msgs_generate_messages_check_deps_AddToLog/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 Universal_Robots_ROS_Driver/ur_dashboard_msgs/CMakeFiles/_ur_dashboard_msgs_generate_messages_check_deps_SetModeFeedback.dir/rule:
@@ -786,7 +786,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_ProgramState"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SetModeActionGoal"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SetModeActionResult"
@@ -801,11 +800,6 @@ help:
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_GetLoadedProgram"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction"
-	@echo "... ur_dashboard_msgs_gennodejs"
-	@echo "... ur_dashboard_msgs_generate_messages_py"
-	@echo "... install/strip"
-	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_Popup"
 	@echo "... ur_dashboard_msgs_generate_messages_cpp"
@@ -815,10 +809,15 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_GetSafetyMode"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_IsProgramRunning"
+	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SetModeAction"
+	@echo "... ur_dashboard_msgs_gennodejs"
+	@echo "... ur_dashboard_msgs_generate_messages_py"
+	@echo "... install/strip"
+	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... ur_dashboard_msgs_genlisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_AddToLog"
+	@echo "... std_msgs_generate_messages_py"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SetModeFeedback"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_SafetyMode"
 	@echo "... _ur_dashboard_msgs_generate_messages_check_deps_RawRequest"
@@ -834,6 +833,7 @@ help:
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... rebuild_cache"
+	@echo "... list_install_components"
 .PHONY : help
 
 

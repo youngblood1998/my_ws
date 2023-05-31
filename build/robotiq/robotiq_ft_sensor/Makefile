@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -196,36 +196,6 @@ robotiq_ft_sensor_generate_messages_py/fast:
 .PHONY : robotiq_ft_sensor_generate_messages_py/fast
 
 # Convenience name for target.
-robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
-.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
-
-# Convenience name for target.
-robotiq_ft_sensor_genpy: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
-
-.PHONY : robotiq_ft_sensor_genpy
-
-# fast build rule for target.
-robotiq_ft_sensor_genpy/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/build
-.PHONY : robotiq_ft_sensor_genpy/fast
-
-# Convenience name for target.
-robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
-.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
-
-# Convenience name for target.
-robotiq_ft_sensor_gennodejs: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
-
-.PHONY : robotiq_ft_sensor_gennodejs
-
-# fast build rule for target.
-robotiq_ft_sensor_gennodejs/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/build
-.PHONY : robotiq_ft_sensor_gennodejs/fast
-
-# Convenience name for target.
 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_cpp.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_cpp.dir/rule
 .PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_cpp.dir/rule
@@ -284,36 +254,6 @@ robotiq_ft_sensor_generate_messages_lisp: robotiq/robotiq_ft_sensor/CMakeFiles/r
 robotiq_ft_sensor_generate_messages_lisp/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_lisp.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_lisp.dir/build
 .PHONY : robotiq_ft_sensor_generate_messages_lisp/fast
-
-# Convenience name for target.
-robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
-.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
-
-# Convenience name for target.
-robotiq_ft_sensor_geneus: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
-
-.PHONY : robotiq_ft_sensor_geneus
-
-# fast build rule for target.
-robotiq_ft_sensor_geneus/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/build
-.PHONY : robotiq_ft_sensor_geneus/fast
-
-# Convenience name for target.
-robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
-.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
-
-# Convenience name for target.
-_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor: robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
-
-.PHONY : _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor
-
-# fast build rule for target.
-_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/build
-.PHONY : _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor/fast
 
 # Convenience name for target.
 robotiq/robotiq_ft_sensor/CMakeFiles/rq_sensor.dir/rule:
@@ -376,6 +316,36 @@ robotiq_ft_sensor_genlisp/fast:
 .PHONY : robotiq_ft_sensor_genlisp/fast
 
 # Convenience name for target.
+robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
+.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
+
+# Convenience name for target.
+robotiq_ft_sensor_geneus: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/rule
+
+.PHONY : robotiq_ft_sensor_geneus
+
+# fast build rule for target.
+robotiq_ft_sensor_geneus/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_geneus.dir/build
+.PHONY : robotiq_ft_sensor_geneus/fast
+
+# Convenience name for target.
+robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
+.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
+
+# Convenience name for target.
+_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor: robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/rule
+
+.PHONY : _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor
+
+# fast build rule for target.
+_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/_robotiq_ft_sensor_generate_messages_check_deps_ft_sensor.dir/build
+.PHONY : _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor/fast
+
+# Convenience name for target.
 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs.dir/rule
 .PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs.dir/rule
@@ -389,6 +359,36 @@ robotiq_ft_sensor_generate_messages_nodejs: robotiq/robotiq_ft_sensor/CMakeFiles
 robotiq_ft_sensor_generate_messages_nodejs/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs.dir/build
 .PHONY : robotiq_ft_sensor_generate_messages_nodejs/fast
+
+# Convenience name for target.
+robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
+.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
+
+# Convenience name for target.
+robotiq_ft_sensor_genpy: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/rule
+
+.PHONY : robotiq_ft_sensor_genpy
+
+# fast build rule for target.
+robotiq_ft_sensor_genpy/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_genpy.dir/build
+.PHONY : robotiq_ft_sensor_genpy/fast
+
+# Convenience name for target.
+robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
+.PHONY : robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
+
+# Convenience name for target.
+robotiq_ft_sensor_gennodejs: robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/rule
+
+.PHONY : robotiq_ft_sensor_gennodejs
+
+# fast build rule for target.
+robotiq_ft_sensor_gennodejs/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/build.make robotiq/robotiq_ft_sensor/CMakeFiles/robotiq_ft_sensor_gennodejs.dir/build
+.PHONY : robotiq_ft_sensor_gennodejs/fast
 
 nodes/rq_sensor.o: nodes/rq_sensor.cpp.o
 
@@ -505,27 +505,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... rq_test_sensor"
 	@echo "... robotiq_ft_sensor_generate_messages_py"
-	@echo "... install/local"
-	@echo "... robotiq_ft_sensor_genpy"
-	@echo "... robotiq_ft_sensor_gennodejs"
 	@echo "... robotiq_ft_sensor_generate_messages_cpp"
 	@echo "... _robotiq_ft_sensor_generate_messages_check_deps_sensor_accessor"
 	@echo "... robotiq_ft_sensor_generate_messages_eus"
 	@echo "... robotiq_ft_sensor_generate_messages_lisp"
-	@echo "... robotiq_ft_sensor_geneus"
-	@echo "... _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor"
 	@echo "... rq_sensor"
 	@echo "... robotiq_ft_sensor_generate_messages"
 	@echo "... robotiq_ft_sensor_gencpp"
 	@echo "... robotiq_ft_sensor_genlisp"
+	@echo "... robotiq_ft_sensor_geneus"
+	@echo "... _robotiq_ft_sensor_generate_messages_check_deps_ft_sensor"
 	@echo "... robotiq_ft_sensor_generate_messages_nodejs"
+	@echo "... install/local"
+	@echo "... robotiq_ft_sensor_genpy"
+	@echo "... robotiq_ft_sensor_gennodejs"
 	@echo "... nodes/rq_sensor.o"
 	@echo "... nodes/rq_sensor.i"
 	@echo "... nodes/rq_sensor.s"

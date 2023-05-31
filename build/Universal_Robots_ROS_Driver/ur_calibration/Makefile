@@ -79,17 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -101,16 +90,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/local/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -132,6 +121,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,64 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
+Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
 
 # Convenience name for target.
-calibration_test: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
+run_tests_ur_calibration_gtest: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
 
-.PHONY : calibration_test
+.PHONY : run_tests_ur_calibration_gtest
 
 # fast build rule for target.
-calibration_test/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build
-.PHONY : calibration_test/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
-
-# Convenience name for target.
-run_tests_ur_calibration: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
-
-.PHONY : run_tests_ur_calibration
-
-# fast build rule for target.
-run_tests_ur_calibration/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/build
-.PHONY : run_tests_ur_calibration/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
-
-# Convenience name for target.
-_run_tests_ur_calibration: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
-
-.PHONY : _run_tests_ur_calibration
-
-# fast build rule for target.
-_run_tests_ur_calibration/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/build
-.PHONY : _run_tests_ur_calibration/fast
-
-# Convenience name for target.
-Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
-
-# Convenience name for target.
-calibration_correction: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
-
-.PHONY : calibration_correction
-
-# fast build rule for target.
-calibration_correction/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build
-.PHONY : calibration_correction/fast
+run_tests_ur_calibration_gtest/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/build
+.PHONY : run_tests_ur_calibration_gtest/fast
 
 # Convenience name for target.
 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration_gtest.dir/rule:
@@ -241,19 +196,64 @@ _run_tests_ur_calibration_gtest/fast:
 .PHONY : _run_tests_ur_calibration_gtest/fast
 
 # Convenience name for target.
-Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
-.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
+Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
 
 # Convenience name for target.
-run_tests_ur_calibration_gtest: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/rule
+run_tests_ur_calibration: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/rule
 
-.PHONY : run_tests_ur_calibration_gtest
+.PHONY : run_tests_ur_calibration
 
 # fast build rule for target.
-run_tests_ur_calibration_gtest/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration_gtest.dir/build
-.PHONY : run_tests_ur_calibration_gtest/fast
+run_tests_ur_calibration/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/run_tests_ur_calibration.dir/build
+.PHONY : run_tests_ur_calibration/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
+
+# Convenience name for target.
+calibration_correction: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/rule
+
+.PHONY : calibration_correction
+
+# fast build rule for target.
+calibration_correction/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build
+.PHONY : calibration_correction/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
+
+# Convenience name for target.
+_run_tests_ur_calibration: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/rule
+
+.PHONY : _run_tests_ur_calibration
+
+# fast build rule for target.
+_run_tests_ur_calibration/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration.dir/build
+.PHONY : _run_tests_ur_calibration/fast
+
+# Convenience name for target.
+Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
+.PHONY : Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
+
+# Convenience name for target.
+calibration_test: Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/rule
+
+.PHONY : calibration_test
+
+# fast build rule for target.
+calibration_test/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build
+.PHONY : calibration_test/fast
 
 # Convenience name for target.
 Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/_run_tests_ur_calibration_gtest_calibration_test.dir/rule:
@@ -306,8 +306,8 @@ src/calibration.o: src/calibration.cpp.o
 
 # target to build an object file
 src/calibration.cpp.o:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.o
 	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/src/calibration.cpp.o
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.o
 .PHONY : src/calibration.cpp.o
 
 src/calibration.i: src/calibration.cpp.i
@@ -316,8 +316,8 @@ src/calibration.i: src/calibration.cpp.i
 
 # target to preprocess a source file
 src/calibration.cpp.i:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.i
 	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/src/calibration.cpp.i
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.i
 .PHONY : src/calibration.cpp.i
 
 src/calibration.s: src/calibration.cpp.s
@@ -326,8 +326,8 @@ src/calibration.s: src/calibration.cpp.s
 
 # target to generate assembly for a file
 src/calibration.cpp.s:
-	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.s
 	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_correction.dir/src/calibration.cpp.s
+	cd /home/jay/my_ws/build && $(MAKE) -f Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/build.make Universal_Robots_ROS_Driver/ur_calibration/CMakeFiles/calibration_test.dir/src/calibration.cpp.s
 .PHONY : src/calibration.cpp.s
 
 src/calibration_consumer.o: src/calibration_consumer.cpp.o
@@ -419,20 +419,20 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... install/local"
-	@echo "... calibration_test"
-	@echo "... run_tests_ur_calibration"
-	@echo "... _run_tests_ur_calibration"
-	@echo "... calibration_correction"
-	@echo "... _run_tests_ur_calibration_gtest"
+	@echo "... edit_cache"
 	@echo "... run_tests_ur_calibration_gtest"
+	@echo "... _run_tests_ur_calibration_gtest"
+	@echo "... run_tests_ur_calibration"
+	@echo "... calibration_correction"
+	@echo "... _run_tests_ur_calibration"
+	@echo "... calibration_test"
 	@echo "... _run_tests_ur_calibration_gtest_calibration_test"
 	@echo "... clean_test_results_ur_calibration"
 	@echo "... list_install_components"
 	@echo "... run_tests_ur_calibration_gtest_calibration_test"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... src/calibration.o"
 	@echo "... src/calibration.i"
 	@echo "... src/calibration.s"

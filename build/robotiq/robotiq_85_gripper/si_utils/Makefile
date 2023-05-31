@@ -68,17 +68,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -89,6 +78,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -181,6 +181,21 @@ _run_tests_si_utils_roslaunch-check/fast:
 .PHONY : _run_tests_si_utils_roslaunch-check/fast
 
 # Convenience name for target.
+robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule:
+	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
+.PHONY : robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
+
+# Convenience name for target.
+run_tests_si_utils: robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
+
+.PHONY : run_tests_si_utils
+
+# fast build rule for target.
+run_tests_si_utils/fast:
+	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/build.make robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/build
+.PHONY : run_tests_si_utils/fast
+
+# Convenience name for target.
 robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils_roslaunch-check.dir/rule:
 	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils_roslaunch-check.dir/rule
 .PHONY : robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils_roslaunch-check.dir/rule
@@ -209,21 +224,6 @@ _run_tests_si_utils: robotiq/robotiq_85_gripper/si_utils/CMakeFiles/_run_tests_s
 _run_tests_si_utils/fast:
 	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/si_utils/CMakeFiles/_run_tests_si_utils.dir/build.make robotiq/robotiq_85_gripper/si_utils/CMakeFiles/_run_tests_si_utils.dir/build
 .PHONY : _run_tests_si_utils/fast
-
-# Convenience name for target.
-robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule:
-	cd /home/jay/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
-.PHONY : robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
-
-# Convenience name for target.
-run_tests_si_utils: robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/rule
-
-.PHONY : run_tests_si_utils
-
-# fast build rule for target.
-run_tests_si_utils/fast:
-	cd /home/jay/my_ws/build && $(MAKE) -f robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/build.make robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils.dir/build
-.PHONY : run_tests_si_utils/fast
 
 # Convenience name for target.
 robotiq/robotiq_85_gripper/si_utils/CMakeFiles/run_tests_si_utils_roslaunch-check_launch.dir/rule:
@@ -277,15 +277,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... edit_cache"
 	@echo "... _run_tests_si_utils_roslaunch-check"
+	@echo "... run_tests_si_utils"
 	@echo "... run_tests_si_utils_roslaunch-check"
 	@echo "... _run_tests_si_utils"
-	@echo "... run_tests_si_utils"
 	@echo "... rebuild_cache"
 	@echo "... run_tests_si_utils_roslaunch-check_launch"
 	@echo "... _run_tests_si_utils_roslaunch-check_launch"
 	@echo "... clean_test_results_si_utils"
+	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
